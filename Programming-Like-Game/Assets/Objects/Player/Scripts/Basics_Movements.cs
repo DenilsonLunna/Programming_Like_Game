@@ -28,19 +28,20 @@ public class Basics_Movements : MonoBehaviour {
 		isGrounded = Physics2D.OverlapArea (new Vector2 (transform.position.x - 0.5f, transform.position.y - 2.7f),
 					 new Vector2 (transform.position.x + 0.5f, transform.position.y - -2.7f), groundLayer);
 		//Jump Logic
+		//Essa parte de codigo faz com que o personagem suba enquanto o botão de pulo (W, SPACE ou UpArrow) esta precionado (analogo ao pulo do super mario Bros)
 		if (rb.velocity.y < 0) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1f) * Time.deltaTime;
-		} else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow)) {
+		} else if (rb.velocity.y > 0 && ( !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.W) )) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1f) * Time.deltaTime;
 		}
 
-		animations ();
+
 	
-		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) { // Right
+		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) { // Run Right
 			Run (KeyCode.RightArrow);
 			isRun = true;
 		
-		} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) { // Left
+		} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) { // Run Left
 			Run (KeyCode.LeftArrow);
 			isRun = true;
 
@@ -50,7 +51,12 @@ public class Basics_Movements : MonoBehaviour {
 		if ((Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W)) && isGrounded) { // Jump
 			Jump();
 		} 
-			
+
+
+
+		// as animações estão sendo chamadas nessa função conforme o estado que o player estiver uma animação é ativada por exemplo : para a ativação de corrida 
+		// o personagem deve esta no chão e o botão de corrida deve esta sendo pressionado.
+		animations (); 
 
 	}
 	void Run(KeyCode name){
