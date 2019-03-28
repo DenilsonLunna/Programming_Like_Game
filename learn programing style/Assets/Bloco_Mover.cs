@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Bloco_Mover : MonoBehaviour {
-
+        //Nothing
 	public Transform bloco;
 	public bool activated = false, originBool = false;
 	public Vector3 origin;
