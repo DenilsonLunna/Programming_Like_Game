@@ -21,15 +21,16 @@ public class SizePanelDuplo : MonoBehaviour {
     [Header("Recebe toda a estrutura do bloco, o Bloco principal")]
     [SerializeField]
     private LayoutElement bloco;//o bloco ou laço, ele recebera o tamanhanho dele mais o tamanho de seu painel.
-    private int tamanhoBloco = 90;// tamanho do bloco duplo sem intruçoes
+    [SerializeField] private int tamanhoBloco;// tamanho do bloco duplo sem intruçoes
 
+    [SerializeField]
     private float larguraBarra, larguraBarra2, alturaBarra, alturaBarra2;
   
     // Update is called once per frame
     void Update()
     {
-        larguraBarra = 22.5f;//largura da imagem "barra"
-        larguraBarra2 = 1f;//largura da imagem "barra"
+        //larguraBarra = 22.5f;//largura da imagem "barra"
+        //larguraBarra2 = 1f;//largura da imagem "barra"
         alturaBarra = rectTransformPanel.rect.height; //altura da imagem "barra1"
         alturaBarra2 = rectTransformPanel2.rect.height; //altura da imagem "barra2"
 

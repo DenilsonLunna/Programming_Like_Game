@@ -11,12 +11,12 @@ public class SizePanel : MonoBehaviour {
     public LayoutElement bloco;//o bloco ou laço, ele recebera o tamanhanho dele mais o tamanho de seu painel. 
   
 
-    private float larguraBarra, alturaBarra;
+    [SerializeField] private float larguraBarra, alturaBarra;
    
 	
 	// Update is called once per frame
 	void Update () {
-        larguraBarra = 22.4f;//largura da imagem "barra" 
+        //larguraBarra = 22.4f;//largura da imagem "barra" 
         alturaBarra = rectTransformPanel.rect.height; //altura da imagem "barra"
 
         rectTransformImgBarra.sizeDelta = new Vector2(larguraBarra, alturaBarra); // modifica altura e largura da barra

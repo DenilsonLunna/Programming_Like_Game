@@ -58,7 +58,7 @@ public class PlattaformTest : MonoBehaviour
 	{
 		//String Command = Terminal.gameObject.GetComponentInChildren<Text>().text;
 
-		Debug.Log ("Command: " +Command);
+		//Debug.Log ("Command: " +Command);
 
 		//Command = cleaner (Command);
 		Command = Clean(Command);
@@ -505,7 +505,7 @@ public class PlattaformTest : MonoBehaviour
 					switch (OP) 
 						{
 					case '+':
-							//Debug.Log ("kct");
+							Debug.Log ("kct");
 								elem.floatValue = valueF1 + valueF2;
 								break;
 							case '-':
@@ -524,7 +524,7 @@ public class PlattaformTest : MonoBehaviour
 						{
 
 							case '+':
-						//Debug.Log ("kcilda");
+						Debug.Log ("kcilda");
 								elem.intValue = valueI1 + valueI2;
 								break;
 							case '-':
