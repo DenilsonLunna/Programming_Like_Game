@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Script_Enquanto : MonoBehaviour
 {
-	[SerializeField] public Transform panel, fan;
+    //Indicates if the script is running or not
+    public bool running;
+    // Panel where the childs are // object to execute the action
+	public Transform panel, obj;
+    // childs of the panel
 	public List <Transform> panelChilds = new List<Transform>();
+    // how much should the object move on the X and Y axis
 	public float timer, angle, xAxis, yAxis;
+    // Tells the script when to start move, rotate, update the list of childs
 	public bool startRotate, startMove, updateList;
 	
     // Start is called before the first frame update
@@ -19,14 +25,17 @@ public class Script_Enquanto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	
+    	// Checks if some of the childs are 'mova' or 'girar'
         for (int i = 0; i < panelChilds.Count ; i++){
+            // rotates the object while startRotate is true
         	if (panelChilds[i] != null && panelChilds[i].gameObject.name == "girar" && startRotate) 
-        		fan.Rotate(0.0f, 0.0f, angle, Space.Self);
+        		obj.Rotate(0.0f, 0.0f, angle, Space.Self);
+            // moves the object while startMove is true
         	if (panelChilds[i] != null && panelChilds[i].gameObject.name == "mova" && startMove) 
-        		fan.Translate(xAxis, yAxis, 0.0f);
+        		obj.Translate(xAxis, yAxis, 0.0f);
         	
         }
+        // updates the list of childs
         if (updateList) UpdateList();
     }
 
