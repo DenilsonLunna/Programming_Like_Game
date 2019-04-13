@@ -15,4 +15,15 @@ public class Script_Girar : MonoBehaviour
     {
         
     }
+
+    public bool RotatePlatform(bool startRotate, bool left, bool right, int numRepeticoes)
+    {
+        if (!startRotate) return false;
+        if (left) transform.Rotate(0.0f, 0.0f, 1.0f, Space.Self);
+        if (right) transform.Rotate(0.0f, 0.0f, -1.0f, Space.Self);
+        if (left || right) numRepeticoes--;
+        Debug.Log(numRepeticoes + " " + (left || right));
+
+        return numRepeticoes != 0 ? true : false;
+    }
 }

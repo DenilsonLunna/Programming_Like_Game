@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Script_Enquanto : MonoBehaviour
 {
-	[SerializeField] private Transform panel, fan;
+	[SerializeField] public Transform panel, fan;
 	public List <Transform> panelChilds = new List<Transform>();
 	public float timer, angle, xAxis, yAxis;
 	public bool startRotate, startMove, updateList;
@@ -23,7 +23,7 @@ public class Script_Enquanto : MonoBehaviour
         for (int i = 0; i < panelChilds.Count ; i++){
         	if (panelChilds[i] != null && panelChilds[i].gameObject.name == "girar" && startRotate) 
         		fan.Rotate(0.0f, 0.0f, angle, Space.Self);
-        	if (panelChilds[i] != null && panelChilds[i].gameObject.name == "girar" && startMove) 
+        	if (panelChilds[i] != null && panelChilds[i].gameObject.name == "mova" && startMove) 
         		fan.Translate(xAxis, yAxis, 0.0f);
         	
         }
