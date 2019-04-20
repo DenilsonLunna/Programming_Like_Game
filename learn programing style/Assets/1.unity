@@ -864,10 +864,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1774c9afb13e046af00b7fed9a11ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running: 0
   panel: {fileID: 1504918042}
   obj: {fileID: 0}
   panelChilds: []
-  timer: 0
   xAxis: 0
   yAxis: 0
   startMove: 0
@@ -8239,7 +8239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.32475805, y: 1}
-  m_AnchoredPosition: {x: -303, y: -405}
+  m_AnchoredPosition: {x: -303, y: -405.0643}
   m_SizeDelta: {x: 383.36, y: 608.9}
   m_Pivot: {x: 0.5, y: 0.000000029802322}
 --- !u!114 &624545728
@@ -21256,7 +21256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848718977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.29, y: 0.4, z: -0.15625}
+  m_LocalPosition: {x: -4.56, y: 0.4, z: -0.15625}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 578362286}
@@ -21278,12 +21278,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea991cc7c3bcd414fa1fd189405e91f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  running: 0
+  obj: {fileID: 0}
   xAxis: 0.01
   yAxis: 0.01
   posX: 0
   posY: 0
   startMove: 0
+  startMoveSingle: 0
   left: 0
   right: 0
   up: 0
@@ -21293,7 +21295,7 @@ MonoBehaviour:
   posOriginal: {x: 0, y: 0, z: 0}
   repita: {fileID: 65760978}
   vet: {x: 0, y: 0, z: 0}
-  obj: {fileID: 0}
+  setup: 0
 --- !u!114 &1848718980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21571,6 +21573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f3852e9b4db134bbe0eb656dfc5375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running: 0
   panel: {fileID: 842396265}
   obj: {fileID: 0}
   panelChilds: []
@@ -21901,7 +21904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7533670b089611849b32f6c26290d283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running: 0
   obj: {fileID: 0}
+  startRotate: 0
 --- !u!114 &1885493776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25432,12 +25437,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea991cc7c3bcd414fa1fd189405e91f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  running: 0
+  obj: {fileID: 0}
   xAxis: 0.01
   yAxis: 0.01
   posX: 0
   posY: 0
   startMove: 0
+  startMoveSingle: 0
   left: 0
   right: 0
   up: 0
@@ -25447,4 +25454,4 @@ MonoBehaviour:
   posOriginal: {x: 0, y: 0, z: 0}
   repita: {fileID: 65760978}
   vet: {x: 0, y: 0, z: 0}
-  obj: {fileID: 0}
+  setup: 0
