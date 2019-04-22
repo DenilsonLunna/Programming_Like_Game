@@ -24,6 +24,7 @@ public class Script_Repita : MonoBehaviour
     // aux variables
 	public float posX, posY;
     public bool isExecuting;
+    public Script_Testar arasta;
 	
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,9 @@ public class Script_Repita : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!running) return;
+        
         // Checks if some of the childs are 'mova' or 'girar'
     	for (int i = 0; i < panelChilds.Count ; i++){
             // if child(i) is 'mova', it makes the object move
@@ -44,11 +47,12 @@ public class Script_Repita : MonoBehaviour
                 Script_Mover aux = panelChilds[i].GetComponent<Script_Mover>();
                 // gets the parameters of block repita and passes it to the block move
                 if(!aux.startMove) aux.AdjustParameters(startMove, left, right,up,down,numRepeticoes,varControle, posOriginal, obj);
-                aux.startMove = true;
-
+                aux.startMove = true; aux.running = true;
+                running = true;
                 // basicly it says that, while isExecuting move the object, if not, stop moving and reset isExecuting to true
                 isExecuting = aux.Move();
-                if(!isExecuting) {startMove = isExecuting; isExecuting = true;}
+                if(!isExecuting) {startMove = isExecuting; running = false; aux.running = false; isExecuting = true;}
+                arasta.running = !running;
             }
             // if child(i) is 'girar', it makes the object rotate
             if (panelChilds[i] != null && panelChilds[i].gameObject.name == "girar" && startRotate && isExecuting)
@@ -57,8 +61,11 @@ public class Script_Repita : MonoBehaviour
                     // gets the script of the block 'girar' to make the object rotate
                     Script_Girar aux = panelChilds[i].GetComponent<Script_Girar>();
                     // basicly it says that, while isExecuting rotate the object, if not, stop rotating and reset isExecuting to true
+                    running = true; aux.running = true;
                     isExecuting = aux.RotatePlatform(startRotate, left, right, numRepeticoes--);
-                    if(!isExecuting) {startRotate = isExecuting; isExecuting = true;}
+                    
+                    if(!isExecuting) {startRotate = isExecuting; running = false; aux.running = false; isExecuting = true;}
+                    arasta.running = running == true ? false : true;
                 }
             }
                 

@@ -22,6 +22,7 @@ public class Script_Mover : MonoBehaviour
     public Vector3 posOriginal;
     // reference to its possible father
     public Script_Repita repita;
+    public Script_Testar arasta;
     public Vector3 vet;
     public bool setup;
     
@@ -35,8 +36,11 @@ public class Script_Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    	if (!running) return;
         if (startMoveSingle) Move();
         if (setup) SetupParameters();
+        
     }
 
     public bool Move()
@@ -47,10 +51,10 @@ public class Script_Mover : MonoBehaviour
         // if the object in this script is null, set it to its father`s object
         if(obj == null) obj = repita.obj;
         // checks which direction should move
-        if (left && obj.position.x > posOriginal.x - numRepeticoes) obj.Translate(-xAxis, 0.0f, 0.0f);
-        else if (right && obj.position.x < posOriginal.x + numRepeticoes) obj.Translate(xAxis, 0.0f, 0.0f);
-        else if (up && obj.position.y < posOriginal.y + numRepeticoes) obj.Translate(0.0f, yAxis, 0.0f);
-        else if (down && obj.position.y > posOriginal.y - numRepeticoes) obj.Translate(0.0f, -yAxis, 0.0f);
+        if (left && obj.position.x > posOriginal.x - numRepeticoes) obj.Translate(-xAxis, 0.0f, 0.0f, Space.World);
+        else if (right && obj.position.x < posOriginal.x + numRepeticoes) obj.Translate(xAxis, 0.0f, 0.0f, Space.World);
+        else if (up && obj.position.y < posOriginal.y + numRepeticoes) obj.Translate(0.0f, yAxis, 0.0f, Space.World);
+        else if (down && obj.position.y > posOriginal.y - numRepeticoes) obj.Translate(0.0f, -yAxis, 0.0f, Space.World);
         else {
             // if the object is the wanted position, reset all the control variables
         	repita.isExecuting = false;
@@ -73,6 +77,8 @@ public class Script_Mover : MonoBehaviour
             if (posY - varControle >= 1) { Debug.Log("Instanciar +1"); varControle++; }
         }
         startMoveSingle = varControle != numRepeticoes ? true : false;
+        running = startMoveSingle;
+        arasta.running = running == true ? false : true;
         // if varControle different than number of repetitions return true, else, return false
         return varControle != numRepeticoes ? true : false;
         

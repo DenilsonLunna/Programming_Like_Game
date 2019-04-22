@@ -873,18 +873,19 @@ MonoBehaviour:
   startMove: 0
   startRotate: 0
   updateList: 1
-  set: 1
+  set: 0
   repita: 1
   left: 0
-  right: 0
+  right: 1
   up: 0
-  down: 1
+  down: 0
   numRepeticoes: 2
   varControle: 0
   posOriginal: {x: 0, y: 0, z: 0}
   posX: 0
   posY: 0
   isExecuting: 0
+  arasta: {fileID: 1938735021}
 --- !u!114 &65760979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4307,6 +4308,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arasta: {fileID: 0}
   arastaChilds: []
+  index: 0
+  running: 0
 --- !u!1 &363437832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,9 +4988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20998664b59f544caa070fb1c9b6102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
-  mobilePaint: {fileID: 1199865697}
-  prefabFullFx: {fileID: 128444, guid: 0a7905c6949860d479bb9c522afba9b6, type: 3}
 --- !u!4 &393128860
 Transform:
   m_ObjectHideFlags: 0
@@ -5099,7 +5099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18db9f5855a42d149ac0b7fe2bd21203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customBrushPanel: {fileID: 0}
 --- !u!1 &396469573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,61 +5768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a329d585c217af74f8e7769cad76c730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableTouch: 0
-  paintLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  createCanvasMesh: 1
-  referenceArea: {fileID: 441684847}
-  connectBrushStokes: 1
-  paintColor:
-    serializedVersion: 2
-    rgba: 4294904832
-  brushSize: 32
-  brushSizeMin: 1
-  brushSizeMax: 64
-  hiQualityBrush: 0
-  realTimeTexUpdate: 1
-  textureUpdateSpeed: 0.15
-  useAdditiveColors: 0
-  brushAlphaStrength: 0.01
-  drawMode: 0
-  useLockArea: 1
-  useMaskLayerOnly: 1
-  smoothenMaskEdges: 1
-  useThreshold: 1
-  paintThreshold: 250
-  eraserMode: 1
-  getAreaSize: 1
-  canDrawOnBlack: 0
-  canvasSizeAdjust: {x: 0, y: 0}
-  targetTexture: _MainTex
-  filterMode: 0
-  clearColor:
-    serializedVersion: 2
-    rgba: 4278256125
-  useMaskImage: 1
-  maskTex: {fileID: 2800000, guid: 63bcfc97861888349837fc102b7259b3, type: 3}
-  useCustomBrushes: 0
-  customBrushes: []
-  overrideCustomBrushColor: 1
-  useCustomBrushAlpha: 0
-  selectedBrush: 0
-  useCustomPatterns: 0
-  customPatterns: []
-  selectedPattern: 0
-  previewLineCircle: {fileID: 0}
-  snapLinesToGrid: 0
-  gridResolution: 128
-  resolutionScaler: 1
-  overrideResolution: 0
-  overrideWidth: 1024
-  overrideHeight: 768
-  textureNeedsUpdate: 0
-  undoEnabled: 0
-  userInterface: {fileID: 0}
-  hideUIWhilePainting: 1
-  debugMode: 0
 --- !u!33 &441684849
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9004,9 +8948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07eea53233ed1ed4892d2550e6c2723b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobilePaint: {fileID: 0}
-  buttonTemplate: {fileID: 11400000, guid: 48c213150402ad94183fe2d1a86eefc2, type: 3}
-  padding: 8
 --- !u!1 &682227914
 GameObject:
   m_ObjectHideFlags: 0
@@ -15188,61 +15129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a329d585c217af74f8e7769cad76c730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableTouch: 0
-  paintLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  createCanvasMesh: 1
-  referenceArea: {fileID: 0}
-  connectBrushStokes: 1
-  paintColor:
-    serializedVersion: 2
-    rgba: 4294904832
-  brushSize: 32
-  brushSizeMin: 1
-  brushSizeMax: 64
-  hiQualityBrush: 0
-  realTimeTexUpdate: 1
-  textureUpdateSpeed: 0.15
-  useAdditiveColors: 0
-  brushAlphaStrength: 0.01
-  drawMode: 0
-  useLockArea: 1
-  useMaskLayerOnly: 1
-  smoothenMaskEdges: 1
-  useThreshold: 1
-  paintThreshold: 250
-  eraserMode: 1
-  getAreaSize: 1
-  canDrawOnBlack: 0
-  canvasSizeAdjust: {x: 0, y: 0}
-  targetTexture: _MainTex
-  filterMode: 0
-  clearColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  useMaskImage: 1
-  maskTex: {fileID: 2800000, guid: 63bcfc97861888349837fc102b7259b3, type: 3}
-  useCustomBrushes: 0
-  customBrushes: []
-  overrideCustomBrushColor: 1
-  useCustomBrushAlpha: 0
-  selectedBrush: 0
-  useCustomPatterns: 0
-  customPatterns: []
-  selectedPattern: 0
-  previewLineCircle: {fileID: 0}
-  snapLinesToGrid: 0
-  gridResolution: 128
-  resolutionScaler: 1
-  overrideResolution: 0
-  overrideWidth: 1024
-  overrideHeight: 768
-  textureNeedsUpdate: 0
-  undoEnabled: 0
-  userInterface: {fileID: 0}
-  hideUIWhilePainting: 1
-  debugMode: 0
 --- !u!1 &1203808475
 GameObject:
   m_ObjectHideFlags: 0
@@ -15483,7 +15369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe03dce33feda1c439d2a8012cdec0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobilePaintReference: {fileID: 1199865697}
 --- !u!4 &1220988252
 Transform:
   m_ObjectHideFlags: 0
@@ -21294,6 +21179,7 @@ MonoBehaviour:
   varControle: 0
   posOriginal: {x: 0, y: 0, z: 0}
   repita: {fileID: 65760978}
+  arasta: {fileID: 0}
   vet: {x: 0, y: 0, z: 0}
   setup: 0
 --- !u!114 &1848718980
@@ -21584,6 +21470,8 @@ MonoBehaviour:
   startRotate: 0
   startMove: 0
   updateList: 0
+  condition: 0
+  arasta: {fileID: 1938735021}
 --- !u!1 &1873733990
 GameObject:
   m_ObjectHideFlags: 0
@@ -21907,6 +21795,7 @@ MonoBehaviour:
   running: 0
   obj: {fileID: 0}
   startRotate: 0
+  arasta: {fileID: 1938735021}
 --- !u!114 &1885493776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22311,6 +22200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arasta: {fileID: 1938735020}
   arastaChilds: []
+  index: 0
+  running: 0
 --- !u!1 &1938757020
 GameObject:
   m_ObjectHideFlags: 0
@@ -23209,17 +23100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b4df2f3ab8bcf488401ea8c10980a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorpickers:
-  - {fileID: 493043617}
-  - {fileID: 515641212}
-  - {fileID: 1579661186}
-  - {fileID: 1465584579}
-  - {fileID: 1321293025}
-  - {fileID: 388358745}
-  offsetSelected: 1
-  defaultOffset: -46
-  moveOffsetX: -24
-  currentColorImage: {fileID: 0}
 --- !u!1 &2032427862
 GameObject:
   m_ObjectHideFlags: 0
@@ -24956,7 +24836,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2109482870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1938735021}
+        m_MethodName: StartRunning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2109482870
@@ -25453,5 +25344,6 @@ MonoBehaviour:
   varControle: 0
   posOriginal: {x: 0, y: 0, z: 0}
   repita: {fileID: 65760978}
+  arasta: {fileID: 1938735021}
   vet: {x: 0, y: 0, z: 0}
   setup: 0
