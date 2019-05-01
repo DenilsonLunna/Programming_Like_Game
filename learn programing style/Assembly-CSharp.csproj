@@ -136,20 +136,20 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -334,20 +334,20 @@
  <Reference Include="nunit.framework">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.0f2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.3-Runtime">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
  </Reference>
- <Reference Include="TextMeshPro-2017.3-Editor">
- <HintPath>C:/Users/Pedro Leonardo/Documents/GitHub/Tower_Defense/Programming_Like_Game/PLG/learn programing style/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>C:/Users/Denil/Desktop/ControleDeVersão/Programming_Like_Game/learn programing style/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.0f2/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
