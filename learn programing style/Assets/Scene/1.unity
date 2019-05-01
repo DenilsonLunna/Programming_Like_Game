@@ -3621,7 +3621,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: df7e0cd57b44e814b982af7562a85c7b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 421327ca8f9347648b7d9e02d5c1f66b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -3629,7 +3629,7 @@ SpriteRenderer:
   m_Size: {x: 3.48, y: 5.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &648148113
@@ -7011,18 +7011,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031677246, y: 1.0649382}
+  m_Offset: {x: 0.38768387, y: 1.0649382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 61.995647, y: 5.12}
+    newSize: {x: 70.097435, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 62.072243, y: 2.055124}
+  m_Size: {x: 69.5445, y: 2.055124}
   m_EdgeRadius: 0
 --- !u!251 &1204031193
 PlatformEffector2D:
@@ -7080,15 +7080,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 78d54ce0c460d3a4584c8bca40ad6371, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0caf47b52ca8c734795b75d0ff31219e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 61.995647, y: 5.12}
+  m_Size: {x: 70.097435, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1204031195
@@ -7099,7 +7099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204031191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0012, y: -1.134, z: 0}
+  m_LocalPosition: {x: -0.043, y: -1.134, z: 0}
   m_LocalScale: {x: 0.14935, y: 0.14935, z: 0.14935}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11255,7 +11255,6 @@ GameObject:
   - component: {fileID: 1938735018}
   - component: {fileID: 1938735017}
   - component: {fileID: 1938735016}
-  - component: {fileID: 1938735015}
   - component: {fileID: 1938735021}
   m_Layer: 5
   m_Name: arasta
@@ -11264,19 +11263,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1938735015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114765743815902404, guid: 3469e819ee87ad5488991d3da69e5ede,
-    type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938735014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 887c79e93afb90c4596a33f1565940d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1938735016
 MonoBehaviour:
   m_ObjectHideFlags: 0
