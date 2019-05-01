@@ -41,7 +41,9 @@ public class Script_Mover : MonoBehaviour
     {
 
     	if (!running) {
-            SetupParameters();return;
+            if(obj != null) 
+                SetupParameters();
+            return;
         }
         if (startMoveSingle) Move(); 
         ResetDirection(dropdown.value);
@@ -49,6 +51,7 @@ public class Script_Mover : MonoBehaviour
             repita.running = false;
         }else {
             repita.running = true;
+            if (this.transform.parent.gameObject.tag == "arasta") arasta.running = true;
             running = false;
         }
     }
@@ -61,10 +64,10 @@ public class Script_Mover : MonoBehaviour
         // if the object in this script is null, set it to its father`s object
         if(obj == null) obj = repita.obj;
         // checks which direction should move
-        if (left && obj.position.x > posOriginal.x - numRepeticoes) obj.Translate(-xAxis, 0.0f, 0.0f, Space.World);
-        else if (right && obj.position.x < posOriginal.x + numRepeticoes) obj.Translate(xAxis, 0.0f, 0.0f, Space.World);
-        else if (up && obj.position.y < posOriginal.y + numRepeticoes) obj.Translate(0.0f, yAxis, 0.0f, Space.World);
-        else if (down && obj.position.y > posOriginal.y - numRepeticoes) obj.Translate(0.0f, -yAxis, 0.0f, Space.World);
+        if (left ) obj.Translate(-xAxis, 0.0f, 0.0f, Space.World);
+        else if (right ) obj.Translate(xAxis, 0.0f, 0.0f, Space.World);
+        else if (up ) obj.Translate(0.0f, yAxis, 0.0f, Space.World);
+        else if (down ) obj.Translate(0.0f, -yAxis, 0.0f, Space.World);
         else {
             // if the object is the wanted position, reset all the control variables
         	repita.isExecuting = false;

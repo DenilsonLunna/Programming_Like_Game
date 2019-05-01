@@ -25,7 +25,7 @@ public class Script_Testar : MonoBehaviour
     		for (int i = index; i < arastaChilds.Count ; i++){
 	        	Debug.Log("----------------------- "+i+" ----------------------- ");
 	        	if ( arastaChilds[i].gameObject.tag == "mova"  ){
-	        		Debug.Log("Mova");
+	        		Debug.Log("Testar - Mova");
 	        		Script_Mover mova = arastaChilds[i].gameObject.GetComponent<Script_Mover>();
 	        		if (mova.obj == null) break;
 	        		index++;
@@ -56,7 +56,7 @@ public class Script_Testar : MonoBehaviour
 	        	if ( arastaChilds[i].gameObject.tag == "repita"   ){
 	        		
 	        		Script_Repita repita = arastaChilds[i].gameObject.GetComponent<Script_Repita>();
-	        		Debug.Log("Repita "+repita.gameObject.name);
+	        		Debug.Log("Testar - Repita "+repita.gameObject.name);
 	        		if (repita.obj == null) break;
 	        		index++;
 
@@ -67,12 +67,13 @@ public class Script_Testar : MonoBehaviour
 	        		repita.running = true;
 	        		repita.startRotate = true;
 	        		repita.startMove = true;
+	        		repita.isExecuting = true;
 	        		running = false;
 	        		break;
 	        	}
 	        	
 	        	if ( arastaChilds[i].gameObject.tag == "seEntao"  ){
-	        		Debug.Log("seEntao");
+	        		Debug.Log("Testar - seEntao");
 	        		Script_seEntao seEntao = arastaChilds[i].gameObject.GetComponent<Script_seEntao>();
 	        		seEntao.index = 0; seEntao.running = true;
 	        		index++; running = false;
