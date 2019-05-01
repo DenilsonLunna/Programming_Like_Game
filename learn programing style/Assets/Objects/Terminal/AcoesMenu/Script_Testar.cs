@@ -63,7 +63,7 @@ public class Script_Testar : MonoBehaviour
 	        		// Pegar lista de filhos para setar direção e quantidade de repetições
 	        		//repita.right = true;
 	        		repita.parent = this.transform;
-	        		repita.numRepeticoes = 2;
+	        		repita.numRepeticoes = 90;
 	        		repita.running = true;
 	        		repita.startRotate = true;
 	        		repita.startMove = true;

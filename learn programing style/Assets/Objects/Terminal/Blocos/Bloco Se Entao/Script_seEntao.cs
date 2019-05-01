@@ -26,8 +26,8 @@ public class Script_seEntao : MonoBehaviour
         		else ExecuteELSE();
         	}else if (condition) ExecuteIF();
         }
-        if (condition && index == panel1.childCount) running = false;
-        else if (!condition && index == panel2.childCount){running = false;} 
+        if (condition && index == panel1.childCount && panel1.childCount > 0) running = false;
+        else if (!condition && index == panel2.childCount && panel2.childCount > 0){running = false;} 
     }
 
  	public void UpdateList(){

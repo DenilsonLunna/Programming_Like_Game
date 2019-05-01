@@ -46,6 +46,7 @@ public class Script_Repita : MonoBehaviour
             if (panelChilds[i] != null && panelChilds[i].gameObject.tag == "mova" && startMove && isExecuting)
             {
                 // gets the script of the block 'move' to make the object move
+                Debug.Log("Script Repita - Mova");
                 Script_Mover aux = panelChilds[i].GetComponent<Script_Mover>();
                 aux.repita = this;
                 Debug.Log(aux.gameObject.name);
@@ -70,10 +71,18 @@ public class Script_Repita : MonoBehaviour
                     aux.parent = this.transform; aux.grandParent = this.parent; aux.numRepeticoes = numRepeticoes; 
                     if (numRepeticoes > 0){
                         aux.running = true;
-                        running = aux.RotatePlatform(startRotate, aux.left, aux.right, numRepeticoes--);
+                        isExecuting = aux.RotatePlatform(startRotate, aux.left, aux.right, numRepeticoes--);
+                    }else {
+                        startRotate = isExecuting; running = false; aux.running = false; isExecuting = true;
+                        if (parent.transform.gameObject.tag == "arasta") 
+                            parent.transform.gameObject.GetComponent<Script_Testar>().running = true;
+                        if (parent.transform.gameObject.tag == "seEntao") {
+                            parent.transform.gameObject.GetComponent<Script_seEntao>().running = true;
+                            Debug.Log("SeEntao: "+parent.transform.gameObject.GetComponent<Script_seEntao>().running);
+                        }
                     }
                     
-                    if(!isExecuting) {startRotate = isExecuting; running = false; aux.running = false; isExecuting = true;}
+                    //if(!isExecuting) 
                     //arasta.running = running == true ? false : true;
                 }
             }
@@ -89,6 +98,12 @@ public class Script_Repita : MonoBehaviour
                 }
             }
                 
+        }
+        if (!running ) {
+            if (parent.transform.gameObject.tag == "arasta") 
+                parent.transform.gameObject.GetComponent<Script_Testar>().running = true;
+            if (parent.transform.gameObject.tag == "seEntao") 
+                parent.transform.gameObject.GetComponent<Script_seEntao>().running = true;
         }
         //Debug.Log(isExecuting+" "+startMove + " " +startRotate);
         // updates the list of childs

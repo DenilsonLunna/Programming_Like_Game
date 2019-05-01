@@ -30,7 +30,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 			copy.gameObject.name = gameObject.name;
 		}
 		if (copy != null) OrderList();
-
+		if (this.gameObject.tag == "condition") transform.localScale = new Vector3(0.375f, 0.5f, 1.0f);
 		//if (isOriginal) return;
 		placeholder = new GameObject();
 		placeholder.transform.SetParent( this.transform.parent );

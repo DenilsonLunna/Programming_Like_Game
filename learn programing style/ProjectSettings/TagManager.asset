@@ -10,6 +10,7 @@ TagManager:
   - repita
   - List
   - arasta
+  - condition
   layers:
   - Default
   - TransparentFX

@@ -33,7 +33,7 @@ public class SizePanelDuplo : MonoBehaviour {
         //larguraBarra2 = 1f;//largura da imagem "barra"
         alturaBarra = rectTransformPanel.rect.height; //altura da imagem "barra1"
         alturaBarra2 = rectTransformPanel2.rect.height; //altura da imagem "barra2"
-
+        if(alturaBarra2 < 30) alturaBarra2 = 30;
         rectTransformImgBarra.sizeDelta = new Vector2(larguraBarra, alturaBarra+alt1); // modifica altura e largura da barra
         rectTransformImgBarra2.sizeDelta = new Vector2(larguraBarra2, alturaBarra2+alt2); // modifica altura e largura da barra2
 
