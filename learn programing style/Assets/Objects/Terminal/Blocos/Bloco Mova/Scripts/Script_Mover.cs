@@ -51,7 +51,13 @@ public class Script_Mover : MonoBehaviour
             repita.running = false;
         }else {
             repita.running = true;
-            if (this.transform.parent.gameObject.tag == "arasta") arasta.running = true;
+            if (this.transform.parent.gameObject.tag == "arasta")  arasta.running = true;
+            if (this.transform.parent.gameObject.tag == "seEntao") {
+                seEntao.running = true;
+                if ( (seEntao.index == seEntao.panel2.childCount && seEntao.panel2.childCount > 0) ||
+                    (seEntao.index == seEntao.panel1.childCount && seEntao.panel1.childCount > 0) )
+                seEntao.SendMessage("Finished");
+            }
             running = false;
         }
     }

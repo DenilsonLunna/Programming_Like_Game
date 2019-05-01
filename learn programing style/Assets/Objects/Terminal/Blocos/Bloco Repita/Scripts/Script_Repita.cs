@@ -38,7 +38,7 @@ public class Script_Repita : MonoBehaviour
     void Update()
     {
 
-        if (!running) return;
+        if (!running) {isExecuting = true; return;}
         
         // Checks if some of the childs are 'mova' or 'girar'
     	for (int i = 0; i < panelChilds.Count ; i++){
@@ -82,7 +82,7 @@ public class Script_Repita : MonoBehaviour
                         }
                     }
                     
-                    //if(!isExecuting) 
+                    if(!isExecuting) { startRotate = isExecuting; running = false; aux.running = false; isExecuting = true; }
                     //arasta.running = running == true ? false : true;
                 }
             }

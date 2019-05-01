@@ -10,6 +10,9 @@ public class Script_seEntao : MonoBehaviour
 	public List<Transform> panel2Childs = new List<Transform>();
 	public int index;
 	public bool condition, isIF_ELSE;
+    public Script_Testar parent;
+    Script_Mover mova;
+    Script_Repita repita;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +28,22 @@ public class Script_seEntao : MonoBehaviour
         		if (condition) ExecuteIF();
         		else ExecuteELSE();
         	}else if (condition) ExecuteIF();
+        }else return;
+        
+        if (condition && index == panel1.childCount && panel1.childCount > 0) {
+            running = false; 
         }
-        if (condition && index == panel1.childCount && panel1.childCount > 0) running = false;
-        else if (!condition && index == panel2.childCount && panel2.childCount > 0){running = false;} 
+        else if (!condition && index == panel2.childCount && panel2.childCount > 0){
+            running = false;
+        } 
+    }
+
+    public void Finished(){
+        if (condition && index == panel1.childCount && panel1.childCount > 0) 
+            if (parent.arastaChilds[parent.index - 1].gameObject.tag == this.gameObject.tag) parent.running = true;
+        else if (!condition && index == panel2.childCount && panel2.childCount > 0)
+            Debug.Log(parent.arastaChilds[parent.index - 1].gameObject.tag +" ------------- "+ this.gameObject.tag);
+            if (parent.arastaChilds[parent.index - 1].gameObject.tag == this.gameObject.tag) parent.running = true;
     }
 
  	public void UpdateList(){
@@ -100,23 +116,24 @@ public class Script_seEntao : MonoBehaviour
  	}
 
  	private void ExecuteMover(int list, int i){
- 		Script_Mover mova;
+ 		
  		if (list == 1)   mova = panel1Childs[i].gameObject.GetComponent<Script_Mover>();
  		else mova = panel2Childs[i].gameObject.GetComponent<Script_Mover>();
 	    if (mova.obj == null) return;
 	    index++;
 	    mova.SetupParameters();
     	//Get direction here
-	    mova.up = true;
+	    //mova.up = true;
 	    mova.running = true;
 	    mova.startMoveSingle = true;
+        mova.seEntao = GetComponent<Script_seEntao>();
 	    running = false;
  	}
  	private void ExecuteGirar(){
 
  	}
  	private void ExecuteRepita(int list, int i){
- 		Script_Repita repita;
+ 		
  		if (list == 1) repita = panel1Childs[i].gameObject.GetComponent<Script_Repita>();
 	    else repita = panel2Childs[i].gameObject.GetComponent<Script_Repita>();
 	    if (repita.obj == null) return;
