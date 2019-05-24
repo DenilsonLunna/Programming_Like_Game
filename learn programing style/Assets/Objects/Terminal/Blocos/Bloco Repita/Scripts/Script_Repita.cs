@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class Script_Repita : MonoBehaviour
 {
@@ -27,6 +27,7 @@ public class Script_Repita : MonoBehaviour
     public Script_Testar arasta;
     public Script_Repita nestedRepita;
     public Transform parent;
+    public TMP_InputField input;
 	
     // Start is called before the first frame update
     void Start()

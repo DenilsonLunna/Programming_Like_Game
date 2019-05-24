@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Script_Testar : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Script_Testar : MonoBehaviour
 	public List <Transform> arastaChilds = new List<Transform>();
     public int index;
 	public GameObject terminal;
+	public TMP_InputField input;
+	public Animator animTablet;
+	private int n;
 
     // Start is called before the first frame update
     void Start()
@@ -62,8 +66,10 @@ public class Script_Testar : MonoBehaviour
 
 	        		// Pegar lista de filhos para setar direção e quantidade de repetições
 	        		//repita.right = true;
+	        		input = repita.input; 
+	        		if (!int.TryParse(input.text, out n)) return;
 	        		repita.parent = this.transform;
-	        		repita.numRepeticoes = 90;
+	        		repita.numRepeticoes = n;
 	        		repita.running = true;
 	        		repita.startRotate = true;
 	        		repita.startMove = true;
@@ -92,8 +98,16 @@ public class Script_Testar : MonoBehaviour
 		//terminal.SetActive (false);
 		ResetIndex();
 		running = true; 
+		animTablet.SetBool ("Testando",true); // chamando a animação que faz o tablet subir para o canto superior direito
+
 	}
 
+	public void ReajustNormal(){
+		if (animTablet.GetBool ("Testando")) {
+			animTablet.SetBool ("Testando", false);
+		}
+
+	}
     public void UpdateList(){
     	arastaChilds = new List<Transform>();
     	for (int i = 0; i < arasta.childCount ; i++){

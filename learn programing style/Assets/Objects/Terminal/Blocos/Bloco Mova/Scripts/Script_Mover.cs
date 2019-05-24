@@ -5,6 +5,7 @@ using TMPro;
 
 public class Script_Mover : MonoBehaviour
 {
+	public GameObject playerReference;
     
     //Indicates if the script is running or not
     public bool running;
@@ -34,6 +35,7 @@ public class Script_Mover : MonoBehaviour
     {
         //obj = transform;
         startMove = false;
+		playerReference = GameObject.Find ("Player");
     }
 
     // Update is called once per frame
